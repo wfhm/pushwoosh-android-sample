@@ -1,7 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'org.jetbrains.kotlin.android'
 
-
 android {
     namespace 'com.pushwoosh.demoapp'
     compileSdk 34
@@ -34,7 +33,18 @@ android {
     }
 }
 
-        implementation libs.pushwoosh.firebase
+dependencies {
+    implementation libs.google.services
+    implementation libs.appcompat
+    implementation libs.material
+    implementation libs.constraintlayout
+    implementation libs.lifecycle.livedata.ktx
+    implementation libs.lifecycle.viewmodel.ktx
+    implementation libs.navigation.fragment
+    implementation libs.navigation.ui
+    implementation libs.firebase.messaging
+
+    implementation libs.pushwoosh.firebase
 
     testImplementation libs.junit
     androidTestImplementation libs.ext.junit
